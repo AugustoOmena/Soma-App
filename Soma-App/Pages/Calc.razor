@@ -16,8 +16,11 @@
         <input id="numero2" @bind="numero2" type="number" />
 
         <button @onclick="CalcularSoma">Calcular Soma</button>
+        <button @onclick="CalcularSubtracao">Calcular Subtração</button>
+        <button @onclick="CalcularMultip">Calcular Multiplicação</button>
+        <button @onclick="CalcularDiv">Calcular Divisão</button>
 
-        <p>Resultado da Soma: @resultado</p>
+        <h1>Resultado é: @resultado</h1>
     </div>
 
     @code {
@@ -28,6 +31,21 @@
         private void CalcularSoma()
         {
             resultado = numero1 + numero2;
+        }
+
+        private void CalcularSubtracao()
+        {
+            resultado = numero1 - numero2;
+        }
+
+        private void CalcularMultip()
+        {
+            resultado = numero1 * numero2;
+        }
+
+        private void CalcularDiv()
+        {
+            resultado = numero1 / numero2;
         }
     }
 </body>
